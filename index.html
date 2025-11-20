@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+        <style type="text/tailwindcss">
+            * {
+                font-family: Consolas;
+            }
+            body {
+                overflow: hidden;
+            }
+            main {
+                transition: margin-left 0.2s cubic-bezier(0.7, 0, 0.3, 1);
+            }
+            .card-inner {
+                position: relative;
+                width: 100%;
+                height: 100%;
+                transform-style: preserve-3d;
+                transition: transform 0.6s;
+            }
+
+            .card-inner.is-flipped {
+                transform: rotateY(180deg);
+            }
+            .front,
+            .back {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                backface-visibility: hidden;
+            }
+
+            .front {
+                transform: rotateY(0deg);
+            }
+            .back {
+                transform: rotateY(180deg);
+            }
+        </style>
+        <title>Mateus Vega</title>
+    </head>
+    <body class="w-[100vw] h-screen flex">
+        <section class="w-screen h-screen flex flex-col">
+            <header class="w-full h-1/2 flex items-center justify-center relative bg-gradient-to-br from-white to-gray-100">
+                <div class="absolute right-[22%] w-72 h-72 rounded-full overflow-hidden ring-8 ring-white shadow-xl">
+                    <img src="" alt="" class="bg-white-full h-full object-cover" />
+                </div>
+                <section class="relative z-10 text-center space-y-3">
+                    <h1 class="text-7xl tracking-[-3px] leading-none font-semibold text-slate-900">Mateus Vega</h1>
+                    <p class="text-xl text-slate-500">Learning, creating and innovating.</p>
+                </section>
+            </header>
+            <main class="w-[300vw] h-1/2 flex">
+                <section id="West" class="w-[100vw] min-h-full flex flex-col items-center bg-white py-16 gap-12">
+                    <div class="cards w-full flex flex-wrap justify-center gap-10">
+                        <div id="card-skills" class="card w-1/5 min-w-[220px] h-[350px] transition-transform duration-300 ease-[cubic-bezier(0.7,0,0.3,1)] hover:scale-105">
+                            <div class="card-inner rounded-xl shadow-lg">
+                                <div class="front bg-gradient-to-br from-white to-gray-100 w-full h-full rounded-xlborder border-gray-200 flex flex-col justify-center items-center gap-4 p-6">
+                                    <h3 class="text-center text-2xl font-semibold text-slate-800">My Skills</h3>
+                                    <span class="material-symbols-outlined text-6xl text-slate-700">code</span>
+                                </div>
+                                <div class="back bg-gray-900 w-full h-full rounded-xl shadow-lg flex justify-center items-center p-6 text-center">
+                                    <p class="text-white text-sm leading-relaxed">I build clean, responsive web apps with Flask, Tailwind, and PostgreSQL.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="card-about" class="card w-1/5 min-w-[220px] h-[350px] transition-transform duration-300 ease-[cubic-bezier(0.7,0,0.3,1)] hover:scale-105">
+                            <div class="card-inner rounded-xl shadow-lg">
+                                <div class="front bg-gradient-to-br from-white to-gray-100 w-full h-full rounded-xlborder border-gray-200 flex flex-col justify-center items-center gap-4 p-6">
+                                    <h3 class="text-2xl font-semibold text-slate-800">About me</h3>
+                                    <span class="text-center material-symbols-outlined text-6xl text-slate-700">emoji_people</span>
+                                </div>
+                                <div class="back bg-gray-900 w-full h-full rounded-xl shadow-lg flex justify-center items-center p-6 text-center">
+                                    <p class="text-white text-sm leading-relaxed">I build clean, responsive web apps with Flask, Tailwind, and PostgreSQL.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="card-goals" class="card w-1/5 min-w-[220px] h-[350px] transition-transform duration-300 ease-[cubic-bezier(0.7,0,0.3,1)] hover:scale-105">
+                            <div class="card-inner rounded-xl shadow-lg">
+                                <div class="front bg-gradient-to-br from-white to-gray-100 w-full h-full rounded-xlborder border-gray-200 flex flex-col justify-center items-center gap-4 p-6">
+                                    <h3 class="text-center text-2xl font-semibold text-slate-800">My Goals</h3>
+                                    <span class="material-symbols-outlined text-6xl text-slate-700">things_to_do</span>
+                                </div>
+                                <div class="back bg-gray-900 w-full h-full rounded-xl shadow-lg flex justify-center items-center p-6 text-center">
+                                    <p class="text-white text-sm leading-relaxed">I build clean, responsive web apps with Flask, Tailwind, and PostgreSQL.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cards w-full flex flex-wrap justify-center gap-10">
+                        <div id="card-competitions" class="card w-1/5 min-w-[220px] h-[350px] transition-transform duration-300 ease-[cubic-bezier(0.7,0,0.3,1)] hover:scale-105">
+                            <div class="card-inner rounded-xl shadow-lg">
+                                <div class="front bg-gradient-to-br from-white to-gray-100 w-full h-full rounded-xlborder border-gray-200 flex flex-col justify-center items-center gap-4 p-6">
+                                    <h3 class="text-center text-2xl font-semibold text-slate-800">Academic Competitions</h3>
+                                    <span class="material-symbols-outlined text-6xl text-slate-700">social_leaderboard</span>
+                                </div>
+                                <div class="back bg-gray-900 w-full h-full rounded-xl shadow-lg flex justify-center items-center p-6 text-center">
+                                    <p class="text-white text-sm leading-relaxed">I build clean, responsive web apps with Flask, Tailwind, and PostgreSQL.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="card-math/science" class="card w-1/5 min-w-[220px] h-[350px] transition-transform duration-300 ease-[cubic-bezier(0.7,0,0.3,1)] hover:scale-105">
+                            <div class="card-inner rounded-xl shadow-lg">
+                                <div class="front bg-gradient-to-br from-white to-gray-100 w-full h-full rounded-xlborder border-gray-200 flex flex-col justify-center items-center gap-4 p-6">
+                                    <h3 class="text-center text-2xl font-semibold text-slate-800">Advanced Math & Science Training</h3>
+                                    <span class="material-symbols-outlined text-6xl text-slate-700">science</span>
+                                </div>
+                                <div class="back bg-gray-900 w-full h-full rounded-xl shadow-lg flex justify-center items-center p-6 text-center">
+                                    <p class="text-white text-sm leading-relaxed">I build clean, responsive web apps with Flask, Tailwind, and PostgreSQL.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="card-electronics" class="card w-1/5 min-w-[220px] h-[350px] transition-transform duration-300 ease-[cubic-bezier(0.7,0,0.3,1)] hover:scale-105">
+                            <div class="card-inner rounded-xl shadow-lg">
+                                <div class="front bg-gradient-to-br from-white to-gray-100 w-full h-full rounded-xlborder border-gray-200 flex flex-col justify-center items-center gap-4 p-6">
+                                    <h3 class="text-center text-2xl font-semibold text-slate-800">Electronics & Arduino Projects</h3>
+                                    <span class="material-symbols-outlined text-6xl text-slate-700">memory</span>
+                                </div>
+                                <div class="back bg-gray-900 w-full h-full rounded-xl shadow-lg flex justify-center items-center p-6 text-center">
+                                    <p class="text-white text-sm leading-relaxed">I build clean, responsive web apps with Flask, Tailwind, and PostgreSQL.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cards w-full flex flex-wrap justify-center gap-10">
+                        <div id="card-apprenticeship" class="card w-1/5 min-w-[220px] h-[350px] transition-transform duration-300 ease-[cubic-bezier(0.7,0,0.3,1)] hover:scale-105">
+                            <div class="card-inner rounded-xl shadow-lg">
+                                <div class="front bg-gradient-to-br from-white to-gray-100 w-full h-full rounded-xlborder border-gray-200 flex flex-col justify-center items-center gap-4 p-6">
+                                    <h3 class="text-center text-2xl font-semibold text-slate-800">Programming Apprenticeship</h3>
+                                    <span class="material-symbols-outlined text-6xl text-slate-700">school</span>
+                                </div>
+                                <div class="back bg-gray-900 w-full h-full rounded-xl shadow-lg flex justify-center items-center p-6 text-center">
+                                    <p class="text-white text-sm leading-relaxed">I build clean, responsive web apps with Flask, Tailwind, and PostgreSQL.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="card-innovation" class="card w-1/5 min-w-[220px] h-[350px] transition-transform duration-300 ease-[cubic-bezier(0.7,0,0.3,1)] hover:scale-105">
+                            <div class="card-inner rounded-xl shadow-lg">
+                                <div class="front bg-gradient-to-br from-white to-gray-100 w-full h-full rounded-xlborder border-gray-200 flex flex-col justify-center items-center gap-4 p-6">
+                                    <h3 class="text-center text-2xl font-semibold text-slate-800">Innovation Challenges</h3>
+                                    <span class="material-symbols-outlined text-6xl text-slate-700">lightbulb_2</span>
+                                </div>
+                                <div class="back bg-gray-900 w-full h-full rounded-xl shadow-lg flex justify-center items-center p-6 text-center">
+                                    <p class="text-white text-sm leading-relaxed">I build clean, responsive web apps with Flask, Tailwind, and PostgreSQL.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="card-game" class="card w-1/5 min-w-[220px] h-[350px] transition-transform duration-300 ease-[cubic-bezier(0.7,0,0.3,1)] hover:scale-105">
+                            <div class="card-inner rounded-xl shadow-lg">
+                                <div class="front bg-gradient-to-br from-white to-gray-100 w-full h-full rounded-xlborder border-gray-200 flex flex-col justify-center items-center gap-4 p-6">
+                                    <h3 class="text-center text-2xl font-semibold text-slate-800">Game Development Projects</h3>
+                                    <span class="material-symbols-outlined text-6xl text-slate-700">sports_esports</span>
+                                </div>
+                                <div class="back bg-gray-900 w-full h-full rounded-xl shadow-lg flex justify-center items-center p-6 text-center">
+                                    <p class="text-white text-sm leading-relaxed">I build clean, responsive web apps with Flask, Tailwind, and PostgreSQL.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="h-16 w-full">&nbsp;</div>
+                </section>
+                <section id="Home" class="w-[100vw] h-full flex justify-center items-center bg-white">
+                    <section id="west_side" class="w-1/2 h-2/3 flex flex-col justify-center items-end pr-10">
+                        <h2 onclick="to_screen(-1)" class="text-6xl tracking-[-3px] font-semibold text-slate-800 hover:cursor-pointer hover:text-slate-500 transition-colors">Who am I</h2>
+                    </section>
+                    <div class="h-4/5 w-px bg-gray-300 mx-12"></div>
+                    <section id="east_side" class="w-1/2 h-2/3 flex flex-col justify-center items-start pl-10">
+                        <h2 onclick="to_screen(1)" class="text-6xl tracking-[-3px] font-semibold text-slate-800 hover:cursor-pointer hover:text-slate-500 transition-colors">What I do</h2>
+                    </section>
+                </section>
+                <section id="East" class="w-[100vw] h-full flex justify-center items-center bg-white">EastSide</section>
+            </main>
+        </section>
+        <div class="absolute inset-0 py-50vh flex justify-between items-center px-10 pointer-events-none">
+            <button class="material-symbols-outlined bg-white border-2 border-gray-400 rounded-full p-3 shadow hover:bg-gray-100 transition pointer-events-auto" aria-label="Voltar" onclick="change_screen(-1)" id="left_btn">arrow_back_ios</button>
+            <button class="material-symbols-outlined bg-white border-2 border-gray-400 rounded-full p-3 shadow hover:bg-gray-100 transition pointer-events-auto" aria-label="Avançar" onclick="change_screen(1)" id="right_btn">arrow_forward_ios</button>
+        </div>
+
+        <script>
+            var user_status = 0;
+            // Status = (-1)-West, (0)-Home, (1)-East
+
+            const MAIN_OBJ = document.getElementsByTagName("main")[0];
+
+            const RIGHT_BTN = document.getElementById("right_btn");
+            const LEFT_BTN = document.getElementById("left_btn");
+
+            const HOME_OBJ = document.getElementById("Home");
+            const WEST_OBJ = document.getElementById("West");
+            const EAST_OBJ = document.getElementById("East");
+
+            var cards = document.getElementsByClassName("cards");
+
+            var click_sfx = new Audio("sfx/pop.mp3");
+            var transition_sfx = new Audio("sfx/woosh.mp3");
+
+            function animate_section(section) {
+                section.animate(
+                    [
+                        { opacity: 0, transform: "translateY(30px)" },
+                        { opacity: 1, transform: "translateY(0)" },
+                    ],
+                    { duration: 800, easing: "cubic-bezier(0.7, 0, 0.3, 1)" }
+                );
+            }
+
+            document.querySelectorAll(".card-inner").forEach((card) => {
+                card.addEventListener("click", () => {
+                    card.classList.toggle("is-flipped");
+                });
+            });
+
+            function screen_update() {
+                switch (user_status) {
+                    case -1:
+                        MAIN_OBJ.style.marginLeft = "0vw";
+                        RIGHT_BTN.style.visibility = "visible";
+                        LEFT_BTN.style.visibility = "hidden";
+                        animate_section(WEST_OBJ);
+                        break;
+                    case 0:
+                        MAIN_OBJ.style.marginLeft = "-100vw";
+                        RIGHT_BTN.style.visibility = "visible";
+                        LEFT_BTN.style.visibility = "visible";
+                        animate_section(HOME_OBJ);
+                        break;
+                    case 1:
+                        MAIN_OBJ.style.marginLeft = "-200vw";
+                        RIGHT_BTN.style.visibility = "hidden";
+                        LEFT_BTN.style.visibility = "visible";
+                        animate_section(EAST_OBJ);
+                        break;
+                }
+                if (user_status != 0) {
+                    document.body.style.overflowY = "auto";
+                    for (const element of cards) {
+                        element.style.display = "flex";
+                    }
+                } else {
+                    document.body.style.overflowY = "hidden";
+                    for (const element of cards) {
+                        element.style.display = "none";
+                    }
+                }
+            }
+
+            function change_screen(target) {
+                user_status += target;
+                transition_sfx.currentTime = 0;
+                transition_sfx.play();
+                screen_update();
+            }
+
+            function to_screen(target) {
+                user_status = target;
+                screen_update();
+            }
+
+            screen_update();
+        </script>
+    </body>
+</html>
