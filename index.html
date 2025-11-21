@@ -180,7 +180,7 @@
                     <div class="h-16 w-full">&nbsp;</div>
                 </section>
                 <section id="Home" class="w-[100vw] h-full flex flex-col bg-white">
-                    <div class="w-[100vw] md:h-[92%] h-[88%] flex justify-center items-center">
+                    <div class="w-[100vw] h-[88%] flex justify-center items-center">
                         <section id="west_side" class="w-1/2 h-2/3 flex flex-col justify-center items-end md:pr-10">
                             <h2 onclick="to_screen(-1)" class="md:text-6xl text-2xl tracking-[-3px] font-semibold text-slate-800 hover:cursor-pointer hover:text-slate-500 transition-colors">Who am I</h2>
                         </section>
@@ -189,7 +189,7 @@
                             <h2 onclick="to_screen(1)" class="md:text-6xl text-2xl tracking-[-3px] font-semibold text-slate-800 hover:cursor-pointer hover:text-slate-500 transition-colors">What I do</h2>
                         </section>
                     </div>
-                    <nav class="w-full md:h-[8%] h-[12%] flex justify-center items-center gap-5">
+                    <nav class="w-full h-[12%] flex justify-center items-center gap-5">
                         <a href="https://www.youtube.com/@mateusfcvega" target="_blank" class="transition-transform duration-300 ease-[cubic-bezier(0.7,0,0.3,1)] hover:scale-105">
                             <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24" fill="none" stroke="#0f172a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-youtube-icon lucide-youtube">
                                 <path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17" />
@@ -217,7 +217,30 @@
                         </a>
                     </nav>
                 </section>
-                <section id="East" class="w-[100vw] h-full flex justify-center items-center bg-white">EastSide</section>
+                <section id="East" class="w-[100vw] min-h-full flex flex-col items-center bg-white py-16 gap-12">
+                    <div class="projects w-full flex flex-wrap justify-center gap-10">
+                        <a href="" id="project-1" class="md:w-2/6 w-[85%] flex flex-col transition-transform duration-300 ease-[cubic-bezier(0.7,0,0.3,1)] hover:scale-[1.02] hover:cursor-pointer">
+                            <img src="test_thumb.webp" alt="project-1" class="rounded-lg">
+                            <h3 class="lg:text-lg font-bold text-slate-900">Project 1</h3>
+                            <p class="lg:text-base text-xs text-slate-500">A little and common project, just for fun XD</p>
+                        </a>
+                        <a href="" id="project-2" class="md:w-2/6 w-[85%] flex flex-col transition-transform duration-300 ease-[cubic-bezier(0.7,0,0.3,1)] hover:scale-[1.02] hover:cursor-pointer">
+                            <img src="test_thumb.webp" alt="project-1" class="rounded-lg">
+                            <h3 class="lg:text-lg font-bold text-slate-900">Project 2</h3>
+                            <p class="lg:text-base text-xs text-slate-500">A little and common project, just for fun XD</p>
+                        </a>
+                        <a href="" id="project-3" class="md:w-2/6 w-[85%] flex flex-col transition-transform duration-300 ease-[cubic-bezier(0.7,0,0.3,1)] hover:scale-[1.02] hover:cursor-pointer">
+                            <img src="test_thumb.webp" alt="project-1" class="rounded-lg">
+                            <h3 class="lg:text-lg font-bold text-slate-900">Project 3</h3>
+                            <p class="lg:text-base text-xs text-slate-500">A little and common project, just for fun XD</p>
+                        </a>
+                        <a href="" id="project-4" class="md:w-2/6 w-[85%] flex flex-col transition-transform duration-300 ease-[cubic-bezier(0.7,0,0.3,1)] hover:scale-[1.02] hover:cursor-pointer">
+                            <img src="test_thumb.webp" alt="project-1" class="rounded-lg">
+                            <h3 class="lg:text-lg font-bold text-slate-900">Project 4</h3>
+                            <p class="lg:text-base text-xs text-slate-500">A little and common project, just for fun XD</p>
+                        </a>
+                    <div class="h-16 w-full">&nbsp;</div>
+                </section>
             </main>
         </section>
         <div class="absolute inset-0 py-50vh flex justify-between items-center md:px-10 px-3 pointer-events-none">
@@ -225,7 +248,7 @@
             <button class="material-symbols-outlined bg-white border-2 border-gray-400 rounded-full p-3 shadow hover:bg-gray-100 transition pointer-events-auto md:scale-100 scale-75" aria-label="Avançar" onclick="change_screen(1)" id="right_btn">arrow_forward_ios</button>
         </div>
         <script>
-            var user_status = 0;
+            var user_status = 1;
             // Status = (-1)-West, (0)-Home, (1)-East
 
             const MAIN_OBJ = document.getElementsByTagName("main")[0];
@@ -292,22 +315,18 @@
                         MAIN_OBJ.style.marginLeft = "0vw";
                         RIGHT_BTN.style.visibility = "visible";
                         LEFT_BTN.style.visibility = "hidden";
-                        EAST_OBJ.style.display = "none";
                         animate_section(WEST_OBJ);
                         break;
                     case 0:
                         MAIN_OBJ.style.marginLeft = "-100vw";
                         RIGHT_BTN.style.visibility = "visible";
                         LEFT_BTN.style.visibility = "visible";
-                        EAST_OBJ.style.display = "flex";
-                        WEST_OBJ.style.display = "flex";
                         animate_section(HOME_OBJ);
                         break;
                     case 1:
                         MAIN_OBJ.style.marginLeft = "-200vw";
                         RIGHT_BTN.style.visibility = "hidden";
                         LEFT_BTN.style.visibility = "visible";
-                        WEST_OBJ.style.display = "none";
                         animate_section(EAST_OBJ);
                         break;
                 }
