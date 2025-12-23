@@ -1,0 +1,11 @@
+p_img1
+p_img2
+p_img3
+p_title
+p_subtitle
+p_github
+p_play -> link "mostkillteam.com"
+p_details -> 2025 • Web Development • Finished
+p_overview
+p_whatILearned
+p_technologies -> <ul> <li class="px-3 py-1 bg-zinc-100 rounded-full text-zinc-700">HTML</li> </ul>

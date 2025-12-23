@@ -54,7 +54,7 @@
     </head>
     <body class="w-[100vw] h-screen flex">
         <section class="w-screen h-screen flex flex-col">
-            <div id="flash_element" class="hidden fixed top-4 left-1/2 -translate-x-1/2 bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded md:w-[60vw] w-[90vw] z-[9999] opacity-0 -translate-y-3 transition-all duration-500" role="alert">
+            <div id="flash_element" class="hidden fixed top-4 left-1/2 -translate-x-1/2 bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded md:w-[60vw] w-[90vw] z-20 opacity-0 -translate-y-3 transition-all duration-500" role="alert">
                 <strong class="font-bold md:text-base text-sm">Email copied</strong>
                 <span class="block sm:inline md:text-base text-sm">The email was copied with success</span>
 
@@ -182,11 +182,11 @@
                 <section id="Home" class="w-[100vw] h-full flex flex-col bg-white">
                     <div class="w-[100vw] h-[88%] flex justify-center items-center">
                         <section id="west_side" class="w-1/2 h-2/3 flex flex-col justify-center items-end md:pr-10">
-                            <h2 onclick="to_screen(-1)" class="md:text-6xl text-[1.65rem] lg:tracking-[-3px] tracking-[-2px] font-semibold text-slate-800 hover:cursor-pointer hover:text-slate-500 transition-colors">Who am I</h2>
+                            <h2 onclick="to_screen(-1)" class="md:text-6xl text-[1.65rem] lg:tracking-[-3px] tracking-[-2px] font-semibold text-slate-800 hover:cursor-pointer hover:text-slate-500 transition-colors">About me</h2>
                         </section>
                         <div class="md:h-4/5 h-3/5 w-px bg-gray-300 mx-12"></div>
                         <section id="east_side" class="w-1/2 h-2/3 flex flex-col justify-center items-start md:pl-10">
-                            <h2 onclick="to_screen(1)" class="md:text-6xl text-[1.65rem] lg:tracking-[-3px] tracking-[-2px] font-semibold text-slate-800 hover:cursor-pointer hover:text-slate-500 transition-colors">What I do</h2>
+                            <h2 onclick="to_screen(1)" class="md:text-6xl text-[1.65rem] lg:tracking-[-3px] tracking-[-2px] font-semibold text-slate-800 hover:cursor-pointer hover:text-slate-500 transition-colors">My projects</h2>
                         </section>
                     </div>
                     <nav class="w-full h-[12%] flex justify-center items-center gap-5">
@@ -219,22 +219,22 @@
                 </section>
                 <section id="East" class="w-[100vw] min-h-full flex flex-col items-center bg-white py-16 gap-12">
                     <div class="projects w-full flex flex-wrap justify-center gap-10">
-                        <a href="" id="project-1" class="md:w-2/6 w-[85%] flex flex-col transition-transform duration-300 ease-[cubic-bezier(0.7,0,0.3,1)] hover:scale-[1.02] hover:cursor-pointer">
+                        <a onclick="open_project('project-1')" id="project-1" class="md:w-2/6 w-[85%] flex flex-col transition-transform duration-300 ease-[cubic-bezier(0.7,0,0.3,1)] hover:scale-[1.02] hover:cursor-pointer">
                             <img src="test_thumb.webp" alt="project-1" class="rounded-lg" />
                             <h3 class="lg:text-lg font-bold text-slate-900">Project 1</h3>
                             <p class="lg:text-base text-xs text-slate-500">A little and common project, just for fun XD</p>
                         </a>
-                        <a href="" id="project-2" class="md:w-2/6 w-[85%] flex flex-col transition-transform duration-300 ease-[cubic-bezier(0.7,0,0.3,1)] hover:scale-[1.02] hover:cursor-pointer">
+                        <a onclick="open_project('project-2')" id="project-2" class="md:w-2/6 w-[85%] flex flex-col transition-transform duration-300 ease-[cubic-bezier(0.7,0,0.3,1)] hover:scale-[1.02] hover:cursor-pointer">
                             <img src="test_thumb.webp" alt="project-1" class="rounded-lg" />
                             <h3 class="lg:text-lg font-bold text-slate-900">Project 2</h3>
                             <p class="lg:text-base text-xs text-slate-500">A little and common project, just for fun XD</p>
                         </a>
-                        <a href="" id="project-3" class="md:w-2/6 w-[85%] flex flex-col transition-transform duration-300 ease-[cubic-bezier(0.7,0,0.3,1)] hover:scale-[1.02] hover:cursor-pointer">
+                        <a onclick="open_project('project-3')" id="project-3" class="md:w-2/6 w-[85%] flex flex-col transition-transform duration-300 ease-[cubic-bezier(0.7,0,0.3,1)] hover:scale-[1.02] hover:cursor-pointer">
                             <img src="test_thumb.webp" alt="project-1" class="rounded-lg" />
                             <h3 class="lg:text-lg font-bold text-slate-900">Project 3</h3>
                             <p class="lg:text-base text-xs text-slate-500">A little and common project, just for fun XD</p>
                         </a>
-                        <a href="" id="project-4" class="md:w-2/6 w-[85%] flex flex-col transition-transform duration-300 ease-[cubic-bezier(0.7,0,0.3,1)] hover:scale-[1.02] hover:cursor-pointer">
+                        <a onclick="open_project('project-4')" id="project-4" class="md:w-2/6 w-[85%] flex flex-col transition-transform duration-300 ease-[cubic-bezier(0.7,0,0.3,1)] hover:scale-[1.02] hover:cursor-pointer">
                             <img src="test_thumb.webp" alt="project-1" class="rounded-lg" />
                             <h3 class="lg:text-lg font-bold text-slate-900">Project 4</h3>
                             <p class="lg:text-base text-xs text-slate-500">A little and common project, just for fun XD</p>
@@ -247,6 +247,65 @@
         <div class="absolute inset-0 py-50vh flex justify-between items-center md:px-10 px-3 pointer-events-none">
             <button class="material-symbols-outlined bg-white border-2 border-gray-400 rounded-full p-3 shadow hover:bg-gray-100 transition pointer-events-auto md:scale-100 scale-75" aria-label="Voltar" onclick="change_screen(-1)" id="left_btn">arrow_back_ios</button>
             <button class="material-symbols-outlined bg-white border-2 border-gray-400 rounded-full p-3 shadow hover:bg-gray-100 transition pointer-events-auto md:scale-100 scale-75" aria-label="Avançar" onclick="change_screen(1)" id="right_btn">arrow_forward_ios</button>
+        </div>
+        <div id="full_screen_project" class="flex flex-col border-b-4 border-b-gray-400 absolute inset-0 z-30 w-[100vw] h-[100vh] translate-y-full bg-white transition-transform duration-500">
+            <div class="w-full h-[5%] flex">
+                <a onclick="close_project()">
+                    <svg class="fill-current h-full w-full" role="button" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                        <title>Close</title>
+                        <path d="M14.348 14.849a1.2 1.2 0 0 1-1.697 0L10 11.819l-2.651 3.029a1.2 1.2 0 1 1-1.697-1.697l2.758-3.15-2.759-3.152a1.2 1.2 0 1 1 1.697-1.697L10 8.183l2.651-3.031a1.2 1.2 0 1 1 1.697 1.697l-2.758 3.152 2.758 3.15a1.2 1.2 0 0 1 0 1.698z" />
+                    </svg>
+                </a>
+            </div>
+            <div class="flex flex-col w-[62%] h-[95%] mx-auto">
+                <div class="flex w-full h-[55%]">
+                    <div class="w-[65%] h-full relative overflow-hidden bg-black">
+                        <!-- Slides -->
+                        <div id="carousel" class="flex h-full transition-transform duration-500">
+                            <img id="p_img1" src="https://www.w3schools.com/howto/img_nature_wide.jpg" class="w-full h-full object-cover flex-shrink-0" />
+                            <img id="p_img2" src="https://www.w3schools.com/howto/img_snow_wide.jpg" class="w-full h-full object-cover flex-shrink-0" />
+                            <img id="p_img3" src="https://www.w3schools.com/howto/img_lights_wide.jpg" class="w-full h-full object-cover flex-shrink-0" />
+                        </div>
+                        <button onclick="prevSlide()" class="absolute left-2 top-1/2 -translate-y-1/2 bg-black/50 text-white px-3 py-1 rounded">‹</button>
+                        <button onclick="nextSlide()" class="absolute right-2 top-1/2 -translate-y-1/2 bg-black/50 text-white px-3 py-1 rounded">›</button>
+                    </div>
+                    <div class="w-[35%] h-full flex flex-col justify-between p-8">
+                        <div class="flex flex-col gap-3">
+                            <h1 class="text-5xl font-extrabold tracking-tight text-zinc-900" id="p_tile">PROJETITO MANITO</h1>
+                            <p class="text-zinc-500 text-lg" id="p_subtitle">Just a projetito manitooo</p>
+                        </div>
+                        <div class="flex flex-col gap-4">
+                            <div class="flex gap-4">
+                                <a id="p_github" href="" class="px-4 py-2 rounded-lg bg-zinc-900 text-white font-medium hover:bg-zinc-800 transition">GitHub</a>
+
+                                <a id="p_play" href="" class="px-4 py-2 rounded-lg border border-zinc-300 text-zinc-700 hover:text-zinc-900 hover:border-zinc-500 transition">Projeto</a>
+                            </div>
+                            <p id="p_details" class="text-sm text-zinc-400">2025 • Web Development • Finished</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-full h-[45%] bg-zinc-50 p-8">
+                    <div class="grid grid-cols-3 gap-6 h-full">
+                        <article class="bg-white rounded-xl p-6 shadow-sm flex flex-col gap-3">
+                            <h2 class="text-xl font-semibold text-zinc-900">Overview</h2>
+                            <p class="text-zinc-600 text-sm leading-relaxed" id="p_overview">Brief description of the project, its purpose and main features.</p>
+                        </article>
+                        <article class="bg-white rounded-xl p-6 shadow-sm flex flex-col gap-3">
+                            <h2 class="text-xl font-semibold text-zinc-900">What I Learned</h2>
+                            <p class="text-zinc-600 text-sm leading-relaxed" id="p_whatILearned">Key lessons, challenges faced and skills developed during the project.</p>
+                        </article>
+                        <article class="bg-white rounded-xl p-6 shadow-sm flex flex-col gap-4">
+                            <h2 class="text-xl font-semibold text-zinc-900">Technologies</h2>
+                            <ul class="flex flex-wrap gap-2 text-sm" id="p_technologies">
+                                <li class="px-3 py-1 bg-zinc-100 rounded-full text-zinc-700">HTML</li>
+                                <li class="px-3 py-1 bg-zinc-100 rounded-full text-zinc-700">CSS</li>
+                                <li class="px-3 py-1 bg-zinc-100 rounded-full text-zinc-700">Tailwind</li>
+                                <li class="px-3 py-1 bg-zinc-100 rounded-full text-zinc-700">JavaScript</li>
+                            </ul>
+                        </article>
+                    </div>
+                </div>
+            </div>
         </div>
         <script>
             var user_status = 0;
@@ -261,15 +320,18 @@
             const WEST_OBJ = document.getElementById("West");
             const EAST_OBJ = document.getElementById("East");
 
+            const PROJECT_SCENE = document.getElementById("full_screen_project");
+
             var cards = document.getElementsByClassName("cards");
             var projects = document.getElementsByClassName("projects");
 
             var swoosh_sfx = new Audio("sfx/woosh.mp3");
+            swoosh_sfx.volume = 0.5;
 
             const ALERT_OBJ = document.getElementById("flash_element");
 
             function copy_email() {
-                const email = "contact.mateusfcvega@gmail.com";
+                const email = "contact.mateusfcvega" + "@gmail.com";
 
                 navigator.clipboard.writeText(email).then(() => {
                     ALERT_OBJ.classList.remove("hidden");
@@ -283,6 +345,13 @@
                         close_flash();
                     }, 2500);
                 });
+            }
+
+            function open_project(id) {
+                PROJECT_SCENE.classList.remove("-translate-y-full");
+            }
+            function close_project() {
+                PROJECT_SCENE.classList.add("-translate-y-full");
             }
 
             function close_flash() {
@@ -365,6 +434,26 @@
             }
 
             screen_update();
+        </script>
+        <script>
+            let currentIndex = 0;
+
+            const carousel = document.getElementById("carousel");
+            const totalSlides = carousel.children.length;
+
+            function updateCarousel() {
+                carousel.style.transform = `translateX(-${currentIndex * 100}%)`;
+            }
+
+            function nextSlide() {
+                currentIndex = (currentIndex + 1) % totalSlides;
+                updateCarousel();
+            }
+
+            function prevSlide() {
+                currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+                updateCarousel();
+            }
         </script>
     </body>
 </html>
